@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+
+<!--fragmenty statyczne-->
+    <fragment android:name="com.kalkulator.lukasz.layoutfun.Fragment1"
+        android:id="@+id/Fragment1"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_fragment1" />
+
+    <fragment android:name="com.kalkulator.lukasz.layoutfun.Fragment2"
+        android:id="@+id/Fragment2"
+        android:layout_weight="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_fragment_dynamiczny" />
+<!--fragmenty statyczne-->
+
+
+
+    <!--FrameLayout - kontener na fragmenty dynamiczne-->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/buttonSet1ndDynamicFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="1ndDynamicFragment"
+        android:onClick="Set1stDynamicFragment"/>
+
+    <Button
+        android:id="@+id/buttonSet2ndDynamicFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="2ndDynamicFragment"
+        android:onClick="Set1stFragment"/>
+
+    <Button
+        android:id="@+id/buttonSetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="change text in dynamic"
+        android:onClick="SetFragmentText"/>
+
+</LinearLayout>
